@@ -33,7 +33,7 @@ highlight Curcor ctermbg=Green
 syntax enable
 
 "Set colorscheme
-set term=screen-256color-bce
+set term=screen-256color
 let g:solarized_termcolors=256
 set t_Co=256
 set background=dark
