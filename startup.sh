@@ -18,6 +18,8 @@ touch ~/.bash_aliases
 # copy vimrc and bash in right places
 cp .vimrc ~/.vimrc
 cp .bashrc ~/.bashrc
+cp .bash_profile ~/.bash_profile
+cp .profile ~/.profile
 
 git config --global user.name "Dieuwke Hupkes"
 git config --global user.email dieuwkehupkes@gmail.com
