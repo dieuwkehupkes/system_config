@@ -6,20 +6,23 @@ filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
+""" remap leader key to space
+let mapleader = " "
+
+""" Use leader key to save files and switch buffers
+nnoremap <Leader>w :w<CR>
+nnoremap <Leader>q :q<CR>
+nnoremap <Leader>bn :bn<CR>
+nnoremap <Leader>bp :bp<CR>
+nnoremap <Leader>bd :bd<CR>
+
+nnoremap <Leader>light :set background=light<CR>
+nnoremap <Leader>dark :set background=dark<CR>
+
 "Plugins
 
 " let Vundle manage Vundle
 Plugin 'gmarik/Vundle.vim'
-
-" Plugins
-Plugin 'sophacles/vim-processing'   " Plugin for Processing language
-
-Plugin 'jcf/vim-latex'              " Plugin vor latex
-function SetXeTex()                 " Set compiler to xelatex
-    let g:Tex_CompileRule_pdf = 'xelatex -aux-directory=F:/Vim/my_latex_doc/temp --synctex=-1 -src-specials -interaction=nonstopmode $*'
-endfunction
-map <Leader>lx :<C-U>call SetXeTex()<CR>
-let g:Tex_multipleCompileFormats='pdf,bib,pdf'
 
 Plugin 'bling/vim-airline'          " vim-airline
 let g:Tex_DefaultTargetFormat='pdf'
@@ -33,7 +36,7 @@ highlight Curcor ctermbg=Green
 syntax enable
 
 "Set colorscheme
-set term=screen-256color
+set term=screen-256color-bce
 let g:solarized_termcolors=256
 set t_Co=256
 set background=dark
