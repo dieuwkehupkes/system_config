@@ -4,7 +4,6 @@
 sudo apt install vim
 sudo apt install curl
 sudo apt install git
-sudo apt install virtualenv
 sudo apt-get update
 sudo apt-get upgrade
 
@@ -23,7 +22,7 @@ cp .profile ~/.profile
 
 git config --global user.name "Dieuwke Hupkes"
 git config --global user.email dieuwkehupkes@gmail.com
-git config --global core.editors vim
+git config --global core.editor "vim"
 
 # to generate new ssh key type
 ########################################
