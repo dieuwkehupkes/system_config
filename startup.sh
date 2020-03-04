@@ -7,6 +7,9 @@ sudo apt install git
 sudo apt-get update
 sudo apt-get upgrade
 
+# miktex and texlive
+sudo apt-get install texlive-science
+
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 sudo apt install google-chrome-stable_current_amd64.deb
 rm google-chrome-stable_current_amd64.deb
