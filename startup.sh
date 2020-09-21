@@ -25,6 +25,8 @@ git config --global core.editor "vim"
 
 # Vundle
 git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+git clone https://github.com/vim-airline/vim-airline.git ~/.vim/bundle/vim-airline
+git clone https://github.com/vim-syntastic/syntastic.git ~/.vim/bundle/syntastic
 
 # pathogen
 mkdir -p ~/.vim/autoload ~/.vim/bundle && \
