@@ -25,7 +25,9 @@ sh startup.sh
 4. Install slack
 Download deb: https://slack.com/intl/en-nl/downloads/linux
 
-5.
-Set app switching to workspace only:
+5. Set app switching to workspace only
 gsettings set org.gnome.shell.app-switcher current-workspace-only true
+
+6. Turn of error sound
+system-settings > sound > sound effects
 
