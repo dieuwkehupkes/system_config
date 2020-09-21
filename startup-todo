@@ -1,0 +1,31 @@
+1. Github config:
+
+# add new ssh key
+# https://docs.github.com/en/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent
+
+ssh-keygen -t rsa -b 4096 -C "dieuwkehupkes@gmail.com"
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/id_rsa
+
+# Add to github account, ad key to settings
+
+2. Install git
+sudo apt update
+sudo apt install git
+
+2. Clone setup script and run
+git clone git@github.com:dieuwkehupkes/system_config.git
+cd system_config
+sh startup.sh
+
+3. Workspace grid
+- Go to software center, install gnome tweaks
+- Go to ubuntu software, install workspace matrix
+
+4. Install slack
+Download deb: https://slack.com/intl/en-nl/downloads/linux
+
+5.
+Set app switching to workspace only:
+gsettings set org.gnome.shell.app-switcher current-workspace-only true
+
