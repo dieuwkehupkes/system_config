@@ -18,9 +18,10 @@ git clone git@github.com:dieuwkehupkes/system_config.git
 cd system_config
 sh startup.sh
 
-3. Workspace grid
+3. Workspace grid & compose key
 - Go to software center, install gnome tweaks
 - Go to ubuntu software, install workspace matrix
+- in Gnome-tweaks --> keyboard & Mouse, turn on compose key
 
 4. Install slack
 Download deb: https://slack.com/intl/en-nl/downloads/linux
@@ -31,3 +32,7 @@ gsettings set org.gnome.shell.app-switcher current-workspace-only true
 6. Turn of error sound
 system-settings > sound > sound effects
 
+7. Install rvm and ruby
+# Note: if gpg ends with a general error, try to add --keyserver keyserver.ubuntu.com
+gpg2 --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB
+curl -sSL https://get.rvm.io | bash -s stable
