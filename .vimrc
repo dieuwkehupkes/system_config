@@ -1,11 +1,11 @@
-" instructions for Vundle??
-set nocompatible
-filetype off        
+" " instructions for Vundle??
+" set nocompatible
+" filetype off        
 
 """ set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
-
+" 
 """ remap leader key to space
 let mapleader = " "
 
@@ -19,13 +19,10 @@ nnoremap <Leader>bd :bd<CR>
 nnoremap <Leader>light :set background=light<CR>
 nnoremap <Leader>dark :set background=dark<CR>
 
-"Plugins
+" "Plugins
 
 " let Vundle manage Vundle
 Plugin 'gmarik/Vundle.vim'
-
-Plugin 'bling/vim-airline'          " vim-airline
-let g:Tex_DefaultTargetFormat='pdf'
 
 call vundle#end()
 filetype plugin indent on
@@ -36,11 +33,11 @@ highlight Curcor ctermbg=Green
 syntax enable
 
 "Set colorscheme
-set term=screen-256color-bce
+" set term=screen-256color-bce
 let g:solarized_termcolors=256
 set t_Co=256
-set background=dark
 colorscheme solarized
+set background=dark
 
 "set autoindent
 set autoindent
@@ -52,10 +49,10 @@ let g:syntastic_python_flake8_args='--ignore=E501,E226,W293'
 
 " enable list of buffers
 let g:airline#extensions#tabline#enabled = 1
-
+" 
 " show just the filename
 let g:airline#extensions#tabline#fnamemod = ':t'
-
+" 
 " hide buffers instead of closing them
 set hidden
 
@@ -77,4 +74,10 @@ set showmode
 
 "For pasting from system clipboard
 set clipboard=unnamedplus
+
+"unset last search pattern by hitting return
+nnoremap <CR> :noh<CR><CR>
+
+"Show commit that introduced line with leader g
+map <silent><Leader>g :call setbufvar(winbufnr(popup_atcursor(systemlist("cd " . shellescape(fnamemodify(resolve(expand('%:p')), ":h")) . " && git log --no-merges -n 1 -L " . shellescape(line("v") . "," . line(".") . ":" . resolve(expand("%:p")))), { "padding": [1,1,1,1], "pos": "botleft", "wrap": 0 })), "&filetype", "git")<CR>
 
