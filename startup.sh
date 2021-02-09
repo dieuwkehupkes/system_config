@@ -1,6 +1,8 @@
 #!/bin/bash
 # Script to facilitate startup for new system
 
+######################################################
+# Do not run on fedora
 sudo apt-get update
 sudo apt install git
 sudo apt install curl
@@ -8,6 +10,7 @@ sudo apt-get upgrade
 
 # miktex and texlive
 sudo apt-get install texlive-science
+######################################################
 
 # create bash alias file
 touch ~/.bash_aliases
@@ -15,7 +18,7 @@ touch ~/.bash_aliases
 # copy vimrc and bash in right places
 cp .vimrc ~/.vimrc
 cp .bashrc ~/.bashrc
-cp .bashrc ~/.inputrc
+cp .input ~/.inputrc
 cp .bash_profile ~/.bash_profile
 cp .profile ~/.profile
 
